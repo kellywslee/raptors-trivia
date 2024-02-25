@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 :root {
-@apply bg-grey-950;
+  @apply bg-gray-950 text-gray-50;
 }
 
+#root {
+  @apply flex min-h-dvh flex-col items-center justify-center p-0;
+}
+
+main {
+  @apply w-full max-w-4xl grow pt-24;
+}
