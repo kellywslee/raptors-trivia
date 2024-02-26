@@ -18,23 +18,26 @@ export default function Question() {
   };
 
   return (
-    <section>
+    <section className="text-base md:text-xl">
       <form>
-        <h3>{currentQuestion.question}</h3>
-        {currentQuestion.options.map((option, index) => (
-          <div key={index}>
-            <input
-              type="radio"
-              id={`option-${index}`}
-              name={`currentQuestion-${currentQuestion.id}-option`}
-              value={option}
-              checked={selectedOption === option}
-              onChange={handleOptionChange}
-            />
-            <label htmlFor={`option-${index}`}>{option}</label>
-          </div>
-        ))}
-        <Button text="NEXT QUESTION" onClick={handleSubmit} />
+        <div className="border-1 mb-6">
+          <h3>{currentQuestion.question}</h3>
+          {currentQuestion.options.map((option, index) => (
+            <div key={index} className="border-t-1 my-1 flex gap-2">
+              <input
+                type="radio"
+                id={`option-${index}`}
+                name={`currentQuestion-${currentQuestion.id}-option`}
+                value={option}
+                checked={selectedOption === option}
+                onChange={handleOptionChange}
+                className="ml-2"
+              />
+              <label htmlFor={`option-${index}`}>{option}</label>
+            </div>
+          ))}
+        </div>
+        <Button text="NEXT QUESTION" onClick={handleSubmit} label="next" />
       </form>
     </section>
   );

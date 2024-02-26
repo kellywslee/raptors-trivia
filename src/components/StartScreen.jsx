@@ -8,7 +8,11 @@ export default function StartScreen() {
   return (
     <section className="flex flex-col items-center justify-center gap-4">
       <IoBasketballSharp className="text-9xl text-gray-500" />
-      <Button text="START" onClick={() => dispatch({ type: "start" })} />
+      <Button
+        text="START"
+        onClick={() => dispatch({ type: "start" })}
+        label="start"
+      />
     </section>
   );
 }
