@@ -1,12 +1,14 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable react/prop-types */
 import { createContext, useReducer } from "react";
-// import data from "../data/data";
+import { triviaData } from "../data/data";
 
 export const TriviaContext = createContext();
 
 const initialState = {
   status: "ready",
-  questions: [],
+  questions: triviaData,
+  index: 0,
   answer: null,
   score: 0,
   timeRemaining: null,
@@ -24,14 +26,47 @@ function triviaReducer(state, action) {
         status: "active",
         timeRemaining: 200,
       };
+    case "tick":
+      return {
+        ...state,
+        timeRemaining: state.timeRemaining > 0 ? state.timeRemaining - 1 : 0,
+      };
+    case "submitAnswer":
+      const currentQuestion = state.questions[state.index];
+      const isCorrect = currentQuestion.answer === action.payload;
+
+      return {
+        ...state,
+        answer: action.payload,
+        score: isCorrect ? state.score + 1 : state.score,
+      };
+    case "nextQuestion":
+      return {
+        ...state,
+        index: state.index + 1,
+        answer: null,
+      };
+    default:
+      throw new Error("Action unkonwn");
   }
 }
 
 export function TriviaProvider({ children }) {
-  const [{ status }, dispatch] = useReducer(triviaReducer, initialState);
+  const [{ status, questions, timeRemaining, index, answer, score }, dispatch] =
+    useReducer(triviaReducer, initialState);
 
   return (
-    <TriviaContext.Provider value={{ status, dispatch }}>
+    <TriviaContext.Provider
+      value={{
+        status,
+        questions,
+        timeRemaining,
+        index,
+        answer,
+        score,
+        dispatch,
+      }}
+    >
       {children}
     </TriviaContext.Provider>
   );
