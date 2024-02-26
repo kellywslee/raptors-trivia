@@ -2,7 +2,7 @@
 import { createContext, useReducer } from "react";
 // import data from "../data/data";
 
-const TriviaContext = createContext();
+export const TriviaContext = createContext();
 
 const initialState = {
   status: "ready",

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import TriviaContext from "./context/TriviaContext";
+import { TriviaContext } from "../context/TriviaContext";
 
 export function useTrivia() {
   const context = useContext(TriviaContext);

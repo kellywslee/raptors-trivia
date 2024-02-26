@@ -1,11 +1,14 @@
 import { IoBasketballSharp } from "react-icons/io5";
+import { useTrivia } from "../hooks/useTrivia";
 import Button from "./Button";
 
 export default function StartScreen() {
+  const { dispatch } = useTrivia();
+
   return (
-    <section className="m-auto flex flex-col items-center justify-center gap-4">
+    <section className="flex flex-col items-center justify-center gap-4">
       <IoBasketballSharp className="text-9xl text-gray-500" />
-      <Button text="START" />
+      <Button text="START" onClick={() => dispatch({ type: "start" })} />
     </section>
   );
 }
