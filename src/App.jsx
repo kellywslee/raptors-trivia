@@ -1,5 +1,4 @@
 import { useTrivia } from "./hooks/useTrivia";
-import Header from "./components/Header";
 import StartScreen from "./components/StartScreen";
 import Footer from "./components/Footer";
 import TriviaScreen from "./components/TriviaScreen";
@@ -10,7 +9,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <main>
         {status === "ready" && <StartScreen />}
         {status === "active" && <TriviaScreen />}

@@ -20,10 +20,15 @@ export default function Question() {
   return (
     <section className="text-base md:text-xl">
       <form>
-        <div className="border-1 mb-6">
-          <h3>{currentQuestion.question}</h3>
+        <div className="border-1 shadow-special mb-6 rounded-lg border-gray-500 px-4 pt-4">
+          <h3 className="border-b-1 border-gray-500 pb-4 ">
+            {currentQuestion.question}
+          </h3>
           {currentQuestion.options.map((option, index) => (
-            <div key={index} className="border-t-1 my-1 flex gap-2">
+            <div
+              key={index}
+              className="my-2 flex items-center justify-start gap-2"
+            >
               <input
                 type="radio"
                 id={`option-${index}`}
@@ -31,7 +36,7 @@ export default function Question() {
                 value={option}
                 checked={selectedOption === option}
                 onChange={handleOptionChange}
-                className="ml-2"
+                className="border-1 m-2 h-6 w-6 appearance-none rounded-full border-gray-300 transition-all checked:border-2  checked:bg-red-700 focus:outline-none focus:ring-gray-50/50"
               />
               <label htmlFor={`option-${index}`}>{option}</label>
             </div>

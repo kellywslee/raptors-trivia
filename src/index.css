@@ -11,5 +11,5 @@
 }
 
 main {
-  @apply flex w-11/12 max-w-4xl grow flex-col items-center justify-center pt-24;
+  @apply flex w-11/12 max-w-4xl grow flex-col items-center justify-center gap-4 pt-24;
 }

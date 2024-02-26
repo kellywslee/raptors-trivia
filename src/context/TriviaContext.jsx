@@ -11,7 +11,6 @@ const initialState = {
   index: 0,
   answer: null,
   score: 0,
-  timeRemaining: null,
 };
 
 function triviaReducer(state, action) {
@@ -24,12 +23,7 @@ function triviaReducer(state, action) {
       return {
         ...state,
         status: "active",
-        timeRemaining: 200,
-      };
-    case "tick":
-      return {
-        ...state,
-        timeRemaining: state.timeRemaining > 0 ? state.timeRemaining - 1 : 0,
+        // timeRemaining: 200,
       };
     case "submitAnswer":
       const currentQuestion = state.questions[state.index];
@@ -52,15 +46,20 @@ function triviaReducer(state, action) {
 }
 
 export function TriviaProvider({ children }) {
-  const [{ status, questions, timeRemaining, index, answer, score }, dispatch] =
-    useReducer(triviaReducer, initialState);
+  const [{ status, questions, index, answer, score }, dispatch] = useReducer(
+    triviaReducer,
+    initialState,
+  );
+
+  const numQuestions = questions.length;
 
   return (
     <TriviaContext.Provider
       value={{
         status,
         questions,
-        timeRemaining,
+        numQuestions,
+
         index,
         answer,
         score,

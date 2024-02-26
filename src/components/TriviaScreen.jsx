@@ -4,7 +4,7 @@ import Question from "./Question";
 
 export default function TriviaScreen() {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex w-full max-w-screen-sm flex-col gap-4">
       <Timer />
       <ProgressBar />
       <Question />

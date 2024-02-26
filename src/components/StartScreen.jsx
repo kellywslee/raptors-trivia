@@ -1,5 +1,6 @@
 import { IoBasketballSharp } from "react-icons/io5";
 import { useTrivia } from "../hooks/useTrivia";
+import Header from "./Header";
 import Button from "./Button";
 
 export default function StartScreen() {
@@ -7,6 +8,7 @@ export default function StartScreen() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4">
+      <Header />
       <IoBasketballSharp className="text-9xl text-gray-500" />
       <Button
         text="START"
