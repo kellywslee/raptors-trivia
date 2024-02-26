@@ -7,11 +7,11 @@ export default function Timer() {
   const sec = timeRemaining % 60;
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       dispatch({ type: "tick" });
     }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, [dispatch]);
 
   return (
