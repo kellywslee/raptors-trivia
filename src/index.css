@@ -13,3 +13,14 @@
 main {
   @apply flex w-11/12 max-w-4xl grow flex-col items-center justify-center gap-4 pt-10;
 }
+
+progress {
+  @apply mb-2 h-2 w-full;
+}
+
+::-webkit-progress-bar {
+  @apply rounded-full bg-gray-500;
+}
+::-webkit-progress-value {
+  @apply rounded-full bg-red-700;
+}

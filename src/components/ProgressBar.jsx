@@ -7,7 +7,7 @@ export default function ProgressBar() {
     <div>
       <progress max={numQuestions} value={index} />
       <p>
-        Question {index + 1} / {numQuestions}{" "}
+        Question {index + 1} / {numQuestions}
       </p>
     </div>
   );

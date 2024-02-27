@@ -19,11 +19,13 @@ function triviaReducer(state, action) {
       return {
         ...state,
       };
+
     case "start":
       return {
         ...state,
         status: "active",
       };
+
     case "submitAnswer":
       const currentQuestion = state.questions[state.index];
       const isCorrect = currentQuestion.correctAnswer === action.payload;
@@ -33,12 +35,21 @@ function triviaReducer(state, action) {
         answer: action.payload,
         score: isCorrect ? state.score + 1 : state.score,
       };
+
     case "nextQuestion":
       return {
         ...state,
         index: state.index + 1,
         answer: null,
       };
+
+    case "finish":
+      return {
+        ...state,
+        status: "finished",
+        score: state.score,
+      };
+
     default:
       throw new Error("Action unkonwn");
   }
@@ -58,7 +69,6 @@ export function TriviaProvider({ children }) {
         status,
         questions,
         numQuestions,
-
         index,
         answer,
         score,
