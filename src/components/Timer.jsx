@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { useTrivia } from "../hooks/useTrivia";
 
 export default function Timer() {
+  const TIMER = 10;
   const { dispatch } = useTrivia();
-  const [timeRemaining, setTimeRemaining] = useState(200);
+  const [timeRemaining, setTimeRemaining] = useState(TIMER);
 
   const mins = Math.floor(timeRemaining / 60);
   const seconds = timeRemaining % 60;
@@ -11,7 +12,7 @@ export default function Timer() {
   useEffect(
     function () {
       if (timeRemaining === 0) {
-        dispatch({ type: "quizFinished" });
+        dispatch({ type: "finish" });
         return;
       }
 

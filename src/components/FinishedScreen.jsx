@@ -1,4 +1,6 @@
+import { IoBasketballSharp } from "react-icons/io5";
 import { useTrivia } from "../hooks/useTrivia";
+import Button from "./Button";
 
 export default function FinishedScreen() {
   const { score, dispatch } = useTrivia();
@@ -23,9 +25,15 @@ export default function FinishedScreen() {
   }
 
   return (
-    <section className="flex flex-col gap-4">
-      <p>You scored {percentage}%</p>
+    <section className="flex flex-col items-center justify-center gap-6">
+      <IoBasketballSharp className="text-9xl text-gray-500" />
+      <p className="text-2xl">You scored {percentage}%</p>
       <p className="text-lg">{message}</p>
+      <Button
+        text="PLAY AGAIN"
+        onClick={() => dispatch({ type: "restart" })}
+        label="finish"
+      />
     </section>
   );
 }

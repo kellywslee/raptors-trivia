@@ -50,6 +50,12 @@ function triviaReducer(state, action) {
         score: state.score,
       };
 
+    case "restart":
+      return {
+        ...initialState,
+        status: "ready",
+      };
+
     default:
       throw new Error("Action unkonwn");
   }
