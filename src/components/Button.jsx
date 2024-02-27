@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
-export default function Button({ text, onClick, label }) {
+export default function Button({ text, onClick, label, disabled }) {
   const base =
-    "rounded-lg bg-red-700 px-4 py-3 font-bold text-gray-50 transition-all hover:bg-red-800 text-base md:text-2xl";
+    "rounded-lg text-gray-50 transition-all text-base md:text-2xl font-bold bg-red-700 px-4 py-3 hover:bg-red-800";
   const styles = {
-    start: base,
-    next: `${base} py-2 mt-6 md:text-lg`,
+    start: `${base}`,
+    next: `${base} mt-6 md:text-lg`,
   };
   return (
-    <button onClick={onClick} className={styles[label]}>
+    <button onClick={onClick} className={styles[label]} disabled={disabled}>
       {text}
     </button>
   );

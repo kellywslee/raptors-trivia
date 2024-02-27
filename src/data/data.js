@@ -8,14 +8,14 @@ export const triviaData = [
       "A historical figure",
       "A mythical creature",
     ],
-    answer: "A dinosaur from 'Jurassic Park'",
+    correctAnswer: 1,
   },
   {
     id: 2,
     question:
       "In what year were the Toronto Raptors established as an NBA team?",
     options: ["1990", "1992", "1995", "1998"],
-    answer: "1995",
+    correctAnswer: 2,
   },
   {
     id: 3,
@@ -26,46 +26,46 @@ export const triviaData = [
       "Damon Stoudamire",
       "Chris Bosh",
     ],
-    answer: "Damon Stoudamire",
+    correctAnswer: 2,
   },
   {
     id: 4,
     question:
       "Which Toronto Raptors player won the NBA Rookie of the Year award in the 1998-1999 season?",
     options: ["Vince Carter", "DeMar DeRozan", "Kyle Lowry", "Pascal Siakam"],
-    answer: "Vince Carter",
+    correctAnswer: 0,
   },
   {
     id: 5,
     question: "In what year did the Raptors win their first NBA Championship?",
     options: ["2016", "2017", "2018", "2019"],
-    answer: "2019",
+    correctAnswer: 3,
   },
   {
     id: 6,
     question:
       "Who was named the NBA Finals MVP when the Raptors won the championship?",
     options: ["Kyle Lowry", "Pascal Siakam", "Kawhi Leonard", "Fred VanVleet"],
-    answer: "Kawhi Leonard",
+    correctAnswer: 2,
   },
   {
     id: 7,
     question: "What is the name of the Raptors' mascot?",
     options: ["Raptor Rex", "The Raptor", "Dino", "Claw"],
-    answer: "The Raptor",
+    correctAnswer: 1,
   },
   {
     id: 8,
     question:
       "Who was the Raptors' head coach when they won the NBA Championship?",
     options: ["Dwane Casey", "Sam Mitchell", "Nick Nurse", "Jay Triano"],
-    answer: "Nick Nurse",
+    correctAnswer: 2,
   },
   {
     id: 9,
     question: "Which Raptors player has been nicknamed 'Spicy P'?",
     options: ["Pascal Siakam", "Serge Ibaka", "OG Anunoby", "Marc Gasol"],
-    answer: "Pascal Siakam",
+    correctAnswer: 0,
   },
   {
     id: 10,
@@ -76,33 +76,33 @@ export const triviaData = [
       "Scotiabank Arena",
       "BMO Field",
     ],
-    answer: "Scotiabank Arena",
+    correctAnswer: 2,
   },
   {
     id: 11,
     question:
       "Who was the first Raptors player to be named NBA's Most Improved Player?",
     options: ["Pascal Siakam", "Vince Carter", "Chris Bosh", "Kyle Lowry"],
-    answer: "Pascal Siakam",
+    correctAnswer: 0,
   },
   {
     id: 12,
     question: "Which Raptors player has the nickname 'Air Canada'?",
     options: ["DeMar DeRozan", "Kyle Lowry", "Vince Carter", "Tracy McGrady"],
-    answer: "Vince Carter",
+    correctAnswer: 2,
   },
   {
     id: 13,
     question: "Who is the Raptors' all-time leading scorer?",
     options: ["Vince Carter", "Chris Bosh", "DeMar DeRozan", "Kyle Lowry"],
-    answer: "DeMar DeRozan",
+    correctAnswer: 2,
   },
   {
     id: 14,
     question:
       "In what year did the Raptors make their first NBA playoff appearance?",
     options: ["1998", "2000", "2002", "2004"],
-    answer: "2000",
+    correctAnswer: 1,
   },
   {
     id: 15,
@@ -114,21 +114,21 @@ export const triviaData = [
       "Indiana Pacers",
       "Chicago Bulls",
     ],
-    answer: "New York Knicks",
+    correctAnswer: 0,
   },
   {
     id: 16,
     question:
       "Who was the Raptors' general manager when they won their NBA Championship?",
     options: ["Bryan Colangelo", "Masai Ujiri", "Rob Babcock", "Glen Grunwald"],
-    answer: "Masai Ujiri",
+    correctAnswer: 1,
   },
   {
     id: 17,
     question:
       "Which Raptors player was known for his 'Bismack Biyombo' finger wag after blocking shots?",
     options: ["Bismack Biyombo", "Serge Ibaka", "Marc Gasol", "Pascal Siakam"],
-    answer: "Bismack Biyombo",
+    correctAnswer: 0,
   },
   {
     id: 18,
@@ -140,7 +140,7 @@ export const triviaData = [
       "Kyle Lowry for James Harden",
       "Serge Ibaka for Paul George",
     ],
-    answer: "DeMar DeRozan for Kawhi Leonard and Danny Green",
+    correctAnswer: 1,
   },
   {
     id: 19,
@@ -152,12 +152,12 @@ export const triviaData = [
       "Vince Carter",
       "Terrence Ross",
     ],
-    answer: "Vince Carter",
+    correctAnswer: 2,
   },
   {
     id: 20,
     question: "Who was the Raptors' head coach before Nick Nurse took over?",
     options: ["Dwane Casey", "Jay Triano", "Sam Mitchell", "Lenny Wilkens"],
-    answer: "Dwane Casey",
+    correctAnswer: 0,
   },
 ];

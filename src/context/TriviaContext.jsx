@@ -23,11 +23,10 @@ function triviaReducer(state, action) {
       return {
         ...state,
         status: "active",
-        // timeRemaining: 200,
       };
     case "submitAnswer":
       const currentQuestion = state.questions[state.index];
-      const isCorrect = currentQuestion.answer === action.payload;
+      const isCorrect = currentQuestion.correctAnswer === action.payload;
 
       return {
         ...state,
