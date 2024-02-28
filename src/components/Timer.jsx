@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTrivia } from "../hooks/useTrivia";
 
 export default function Timer() {
-  const TIMER = 10;
+  const TIMER = 180;
   const { dispatch } = useTrivia();
   const [timeRemaining, setTimeRemaining] = useState(TIMER);
 
