@@ -1,8 +1,6 @@
-# React + Vite
+# Toronto Raptors Trivia 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/kellywslee/raptors-trivia/assets/76071382/a634d3b8-e335-4d5b-988b-a196ad4af994)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React, useReducer, useContext, framer motion
