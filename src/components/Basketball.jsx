@@ -5,12 +5,12 @@ export default function Basketball() {
     hidden: {
       opacity: 0,
       pathLength: 0,
-      fill: "rgba(253, 224, 71 , 0)",
+      fill: "rgba(253, 224, 71 , 0.2)",
     },
     visible: {
       opacity: 1,
       pathLength: 1,
-      fill: "rgba(253, 224, 71, 0.1)",
+      fill: "rgba(253, 224, 71, 0.4)",
     },
   };
   return (
