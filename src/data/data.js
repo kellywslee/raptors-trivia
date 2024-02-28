@@ -152,7 +152,7 @@ export const triviaData = [
       "Vince Carter",
       "Tracy McGrady & Vince Carter",
     ],
-    correctAnswer: 2,
+    correctAnswer: 3,
   },
   {
     id: 20,
