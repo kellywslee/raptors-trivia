@@ -10,7 +10,7 @@ export default function Basketball() {
     visible: {
       opacity: 1,
       pathLength: 1,
-      fill: "rgba(253, 224, 71, 0.05)",
+      fill: "rgba(253, 224, 71, 0.1)",
     },
   };
   return (
