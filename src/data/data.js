@@ -150,7 +150,7 @@ export const triviaData = [
       "Tracy McGrady",
       "DeMar DeRozan",
       "Vince Carter",
-      "Terrence Ross",
+      "Tracy McGrady & Vince Carter",
     ],
     correctAnswer: 2,
   },
