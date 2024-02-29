@@ -4,4 +4,4 @@
 
 ![image](https://github.com/kellywslee/raptors-trivia/assets/76071382/be8a7178-1dd3-4b4c-ae31-c7eb7d868eac)
 
-- React, useReducer, useContext, framer motion
+- Tech used: React, useReducer, useContext, framer motion
