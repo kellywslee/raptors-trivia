@@ -1,5 +1,7 @@
 # Toronto Raptors Trivia 
 
+🚀 [Live Demo](https://kellywslee.github.io/raptors-trivia)
+
 - Raptors Trivia is an interactive web application designed for fans of the Toronto Raptors, offering a dynamic and engaging way to test and expand their knowledge about the team. Built with React, this app showcases the power of functional components and hooks to manage the user interface and state, ensuring a seamless and responsive experience.
 - Tech used: React, useReducer, useContext, framer motion
 
